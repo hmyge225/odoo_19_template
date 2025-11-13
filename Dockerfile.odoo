@@ -1,0 +1,10 @@
+FROM odoo:19.0
+USER root
+
+# Autorise l'install malgré PEP 668
+RUN pip3 install --no-cache-dir --break-system-packages qifparse openpyxl pandas
+
+USER odoo
+
+# pandans = Ressource Humaines 
+# qifparse = base_accounting 
